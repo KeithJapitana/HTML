@@ -144,41 +144,53 @@ function cutFruitPieces(fruit){
 
 // console.log(yearsUntilRetirement(1923,`keith`));
 
-//All about Arrays
+// //All about Arrays
 
-const friends = ['Keith', 'keith2', 'keith3'];
+// const friends = ['Keith', 'keith2', 'keith3'];
 
-console.log(friends.length);
+// console.log(friends.length);
 
-//Array basic array methods
+// //Array basic array methods
 
-//push/add elements inside a Array
+// //push/add elements inside a Array
 
-const friendsPush= ['mich', 'keith','stick'];
-const newLength = friendsPush.push('Jay');
-console.log(friendsPush);
-//mesaure the length of the new array
-console.log(newLength);
+// const friendsPush= ['mich', 'keith','stick'];
+// const newLength = friendsPush.push('Jay');
+// console.log(friendsPush);
+// //mesaure the length of the new array
+// console.log(newLength);
 
-friendsPush.unshift ('tube');
-console.log(friendsPush);
+// friendsPush.unshift ('tube');
+// console.log(friendsPush);
 
 
-//delete elements inside a array
+// //delete elements inside a array
 
-friendsPush.pop(); //last
-const popped = friendsPush.pop();
+// friendsPush.pop(); //last
+// const popped = friendsPush.pop();
 
-console.log(friendsPush);
-console.log(popped);
+// console.log(friendsPush);
+// console.log(popped);
 
-friendsPush.shift(); //first
-console.log(friendsPush);
+// friendsPush.shift(); //first
+// console.log(friendsPush);
 
-console.log(friendsPush.indexOf('keith'));
+// console.log(friendsPush.indexOf('keith'));
 
-console.log(friendsPush.includes('mich'));
+// console.log(friendsPush.includes('mich'));
 
-if(friendsPush.includes('keith')){
-  console.log('keith is included');
+// if(friendsPush.includes('keith')){
+//   console.log('keith is included');
+// }
+
+const calcTip = function (bill){
+  return bill >=50 && bill <= 300? bill *0.15
+  : bill *0.20;
 }
+
+const bills = [123, 555, 44];
+
+const tip = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])]
+const total = [bills[0]+tip[0],bills[1]+tip[1],bills[2]+tip[2]];
+
+console.log(bills,tip,total);
