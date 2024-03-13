@@ -47,26 +47,48 @@
 
 // console.log('');
 
-function logger (){
-  console.log('MY NAME IS BLANK');
+// function logger (){
+//   console.log('MY NAME IS BLANK');
+// }
+
+
+// //calling /runng/ invoking function
+// logger();
+
+
+// //creating a function of a blender
+
+// function fruitprocessor(apples, oranges){
+//   console.log(apples,oranges);
+//   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+//   return juice;
+
+// }
+
+// const applejuice = fruitprocessor(5,0);
+
+// console.log(applejuice); 
+
+// console.log(fruitprocessor(5,0));
+
+
+// Function declarations vs expressions
+
+//Function declarations 
+function calcAge1 (birthyear){
+  return 2024 - birthyear;
 }
 
+const age1 = calcAge1(1998);
+console.log(age1);
 
-//calling /runng/ invoking function
-logger();
 
-
-//creating a function of a blender
-
-function fruitprocessor(apples, oranges){
-  console.log(apples,oranges);
-  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-  return juice;
-
+//Function expressions
+const calcAge2 = function(birthyear){
+  return 2024 - birthyear;
 }
 
-const applejuice = fruitprocessor(5,0);
+const age2 = calcAge2(1996);
 
-console.log(applejuice); 
+console.log(age1 ,age2);
 
-console.log(fruitprocessor(5,0));
