@@ -199,12 +199,39 @@ function cutFruitPieces(fruit){
 
 // Objects 
 
-const jonas = {
+const keith = {
   firstName: 'Keith',
-  lastname: 'Japitana',
+  lastName: 'Japitana',
   age: 2024-1996,
   job: 'gambler',
   friends:['one','two','three']
 };
 
-console.log(jonas);
+console.log(keith);
+
+
+console.log(keith.firstName); //dot
+console.log(keith['lastName']); //bracket
+
+const nameKey = 'Name';
+
+console.log(keith['first'+ nameKey]);
+console.log(keith['last' + nameKey]);
+
+
+
+// const interestedIn = prompt ('What do you want to know about keith? Choose between firstName, lastName, age, job and friends');
+
+// if (keith[interestedIn]){
+//   console.log(keith[interestedIn]);
+
+// }
+// else{
+//   console.log('Wrong reqeust! not in the choices');
+// }
+// keith.location ='Philippines'; //dot
+// keith['twitter'] = '@0xkisu'; //brackets
+
+// console.log(keith);
+
+console.log(`${keith.firstName} has ${keith.friends.length} friends and his best friend is ${keith.friends[0]}`);
