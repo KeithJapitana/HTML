@@ -236,78 +236,84 @@ function cutFruitPieces(fruit){
 
 // console.log(`${keith.firstName} has ${keith.friends.length} friends and his best friend is ${keith.friends[0]}`);
 
-const keith = {
-  firstName: 'Keith',
-  lastName: 'Japitana',
-  birthYear: 1996,
-  job: 'gambler',
-  friends:['one','two','three'],
-  hasDriversLicense: false,
+// const keith = {
+//   firstName: 'Keith',
+//   lastName: 'Japitana',
+//   birthYear: 1996,
+//   job: 'gambler',
+//   friends:['one','two','three'],
+//   hasDriversLicense: false,
 
-  // calcAge: function(birthYear){
-  //   console.log(this);
-  //   return 2037 - this.birthYear;
-  // }
-  calcAge: function(birthYear){
-    this.age = 2037 - this.birthYear;
-    return this.age;
- //this.age is just to calculate the calc age function once but still you need to decalre or do a primer calculation
-  },
+//   // calcAge: function(birthYear){
+//   //   console.log(this);
+//   //   return 2037 - this.birthYear;
+//   // }
+//   calcAge: function(birthYear){
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//  //this.age is just to calculate the calc age function once but still you need to decalre or do a primer calculation
+//   },
 
- calcSumm: function(birthYear) {
-    return `${this.firstName} is a ${this.calcAge()} year-old ${this.job}, and he has ${this.hasDriversLicense ? 'a': 'no'} drivers license.`
-  }
-};
+//  calcSumm: function(birthYear) {
+//     return `${this.firstName} is a ${this.calcAge()} year-old ${this.job}, and he has ${this.hasDriversLicense ? 'a': 'no'} drivers license.`
+//   }
+// };
 
-console.log(keith.calcAge());
-console.log(keith.age);
-console.log(keith.calcSumm());
-//challenege
-//Jonas is a 46 year-old teacher, and he has a driver's license
+// console.log(keith.calcAge());
+// console.log(keith.age);
+// console.log(keith.calcSumm());
+// //challenege
+// //Jonas is a 46 year-old teacher, and he has a driver's license
 
-const mark= {
-  firstName:'Mark',
-  lastName:'Miller',
-  mass:78,
-  height:1.69,
+// const mark= {
+//   firstName:'Mark',
+//   lastName:'Miller',
+//   mass:78,
+//   height:1.69,
 
-  calcBMI: function(){
-    return this.bmi = this.mass/this.height **2;
-  },
-  getSummary:function(){
-    return `${this.firstName}'s ${this.calcBMI().toFixed(1)} BMI is higher than ${john.firstName}'s ${john.calcBMI().toFixed(1)}`
-  }
+//   calcBMI: function(){
+//     return this.bmi = this.mass/this.height **2;
+//   },
+//   getSummary:function(){
+//     return `${this.firstName}'s ${this.calcBMI().toFixed(1)} BMI is higher than ${john.firstName}'s ${john.calcBMI().toFixed(1)}`
+//   }
 
-}
+// }
 
-const john = {
-  firstName: 'John',
-  lastName: 'Smith',
-  mass:92,
-  height:1.95,
+// const john = {
+//   firstName: 'John',
+//   lastName: 'Smith',
+//   mass:92,
+//   height:1.95,
 
-  calcBMI: function(){
-   return this.bmi = this.mass/this.height ** 2;
-  },
+//   calcBMI: function(){
+//    return this.bmi = this.mass/this.height ** 2;
+//   },
 
-  getSummary:function(){
-    return `${this.firstName}'s ${this.calcBMI().toFixed(1)} BMI is higher than ${mark.firstName}'s ${mark.calcBMI().toFixed(1)}`
-  }
+//   getSummary:function(){
+//     return `${this.firstName}'s ${this.calcBMI().toFixed(1)} BMI is higher than ${mark.firstName}'s ${mark.calcBMI().toFixed(1)}`
+//   }
 
-}
+// }
 
-// console.log(john.getSummary());
-// console.log(mark.getSummary());
+// // console.log(john.getSummary());
+// // console.log(mark.getSummary());
 
 
-if (john.calcBMI() > mark.calcBMI()){
-  console.log(john.getSummary());
+// if (john.calcBMI() > mark.calcBMI()){
+//   console.log(john.getSummary());
 
-}
-else if (john.calcBMI() < mark.calcBMI()){
-  console.log(mark.getSummary());
-}
-else {
-  console.log(`No one wins`);
+// }
+// else if (john.calcBMI() < mark.calcBMI()){
+//   console.log(mark.getSummary());
+// }
+// else {
+//   console.log(`No one wins`);
+// }
+
+//for loops
+
+for (let rep = 1; rep <= 10; rep++){
+  console.log(`lifting weights repetetion ${rep}`);
 }
 
