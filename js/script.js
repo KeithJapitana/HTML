@@ -103,9 +103,9 @@
 
 // const age3 = calcAge3(1997,'keith');
 // console.log(age3);
-function cutFruitPieces(fruit){
-  return fruit*4;
-}
+// function cutFruitPieces(fruit){
+//   return fruit*4;
+// }
 
 
 // //Functions Calling other functions.
@@ -313,7 +313,48 @@ function cutFruitPieces(fruit){
 
 //for loops
 
-for (let rep = 1; rep <= 10; rep++){
-  console.log(`lifting weights repetetion ${rep}`);
+// for (let rep = 1; rep <= 10; rep++){
+//   console.log(`lifting weights repetetion ${rep}`);
+// }
+
+const keithArray = [
+  'Keith', 'Japitana',
+  2024-1996,
+  'Gambler',['one','two','three']
+]
+
+// const type = [];
+
+// for(let i = 0 ; i<keithArray.length; i++){
+//   console.log(`${keithArray[i]}`);
+//   // type[i] = typeof keithArray[i]
+//   type.push(typeof keithArray[i])
+// }
+// console.log(type);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = []
+
+// for(let i=0; i<years.length; i++){
+//   ages.push(2037 - years[i]);
+  
+// }
+// console.log(ages);
+
+for(let i = 0 ; i<keithArray.length; i++){
+  if(typeof keithArray[i] !== 'string')   
+   {
+    break;
+    // continue;
+  }
+
+  console.log(`${keithArray[i]} ${typeof      
+     keithArray[i]} `);
+  // type[i] = typeof keithArray[i]
+  // type.push(typeof keithArray[i])
 }
+
+
+
+
 
