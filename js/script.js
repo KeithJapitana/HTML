@@ -149,3 +149,36 @@ function cutFruitPieces(fruit){
 const friends = ['Keith', 'keith2', 'keith3'];
 
 console.log(friends.length);
+
+//Array basic array methods
+
+//push/add elements inside a Array
+
+const friendsPush= ['mich', 'keith','stick'];
+const newLength = friendsPush.push('Jay');
+console.log(friendsPush);
+//mesaure the length of the new array
+console.log(newLength);
+
+friendsPush.unshift ('tube');
+console.log(friendsPush);
+
+
+//delete elements inside a array
+
+friendsPush.pop(); //last
+const popped = friendsPush.pop();
+
+console.log(friendsPush);
+console.log(popped);
+
+friendsPush.shift(); //first
+console.log(friendsPush);
+
+console.log(friendsPush.indexOf('keith'));
+
+console.log(friendsPush.includes('mich'));
+
+if(friendsPush.includes('keith')){
+  console.log('keith is included');
+}
