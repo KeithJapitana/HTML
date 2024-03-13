@@ -197,41 +197,71 @@ function cutFruitPieces(fruit){
 
 // console.log(bills,tip,total);
 
-// Objects 
+// // Objects 
+
+// const keith = {
+//   firstName: 'Keith',
+//   lastName: 'Japitana',
+//   age: 2024-1996,
+//   job: 'gambler',
+//   friends:['one','two','three']
+// };
+
+// console.log(keith);
+
+
+// console.log(keith.firstName); //dot
+// console.log(keith['lastName']); //bracket
+
+// const nameKey = 'Name';
+
+// console.log(keith['first'+ nameKey]);
+// console.log(keith['last' + nameKey]);
+
+
+
+// // const interestedIn = prompt ('What do you want to know about keith? Choose between firstName, lastName, age, job and friends');
+
+// // if (keith[interestedIn]){
+// //   console.log(keith[interestedIn]);
+
+// // }
+// // else{
+// //   console.log('Wrong reqeust! not in the choices');
+// // }
+// // keith.location ='Philippines'; //dot
+// // keith['twitter'] = '@0xkisu'; //brackets
+
+// // console.log(keith);
+
+// console.log(`${keith.firstName} has ${keith.friends.length} friends and his best friend is ${keith.friends[0]}`);
 
 const keith = {
   firstName: 'Keith',
   lastName: 'Japitana',
-  age: 2024-1996,
+  birthYear: 1996,
   job: 'gambler',
-  friends:['one','two','three']
+  friends:['one','two','three'],
+  hasDriversLicense: false,
+
+  // calcAge: function(birthYear){
+  //   console.log(this);
+  //   return 2037 - this.birthYear;
+  // }
+  calcAge: function(birthYear){
+    this.age = 2037 - this.birthYear;
+    return this.age;
+ //this.age is just to calculate the calc age function once but still you need to decalre or do a primer calculation
+  },
+
+ calcSumm: function(birthYear) {
+    return `${this.firstName} is a ${this.calcAge()} year-old ${this.job}, and he has ${this.hasDriversLicense ? 'a': 'no'} drivers license.`
+  }
 };
 
-console.log(keith);
+console.log(keith.calcAge());
+console.log(keith.age);
+console.log(keith.calcSumm());
+//challenege
+//Jonas is a 46 year-old teacher, and he has a driver's license
 
-
-console.log(keith.firstName); //dot
-console.log(keith['lastName']); //bracket
-
-const nameKey = 'Name';
-
-console.log(keith['first'+ nameKey]);
-console.log(keith['last' + nameKey]);
-
-
-
-// const interestedIn = prompt ('What do you want to know about keith? Choose between firstName, lastName, age, job and friends');
-
-// if (keith[interestedIn]){
-//   console.log(keith[interestedIn]);
-
-// }
-// else{
-//   console.log('Wrong reqeust! not in the choices');
-// }
-// keith.location ='Philippines'; //dot
-// keith['twitter'] = '@0xkisu'; //brackets
-
-// console.log(keith);
-
-console.log(`${keith.firstName} has ${keith.friends.length} friends and his best friend is ${keith.friends[0]}`);
