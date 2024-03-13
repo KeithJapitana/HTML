@@ -108,13 +108,38 @@ function cutFruitPieces(fruit){
 }
 
 
-//Functions Calling other functions.
-function fruitProcessor (apples,oranges){
-const applesPieces = cutFruitPieces(apples);
-const orangePieces = cutFruitPieces(oranges)
-const juice = `Juice with ${applesPieces} apples and 
-${orangePieces} oranges`
-return juice;
-} 
+// //Functions Calling other functions.
+// function fruitProcessor (apples,oranges){
+// const applesPieces = cutFruitPieces(apples);
+// const orangePieces = cutFruitPieces(oranges)
+// const juice = `Juice with ${applesPieces} apples and 
+// ${orangePieces} oranges`
+// return juice;
+// } 
 
-console.log(fruitProcessor(1,4));
+// console.log(fruitProcessor(1,4));
+
+//Functions Review 
+
+const calcAge = function (birthYear){
+  return 2037 - birthYear;
+}
+
+
+const yearsUntilRetirement = function (birthYear,firstname)
+{
+const age = calcAge(birthYear);
+const retirement = 65 - age;
+if(retirement > 0){
+  return `${firstname} retires in ${retirement} years`;
+}
+
+else {
+  return `Years left to retires ${Math.abs(retirement)} years`
+}
+  
+
+
+}
+
+console.log(yearsUntilRetirement(1923,`keith`));
