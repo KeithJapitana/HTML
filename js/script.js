@@ -119,27 +119,33 @@ function cutFruitPieces(fruit){
 
 // console.log(fruitProcessor(1,4));
 
-//Functions Review 
+// //Functions Review 
 
-const calcAge = function (birthYear){
-  return 2037 - birthYear;
-}
+// const calcAge = function (birthYear){
+//   return 2037 - birthYear;
+// }
 
 
-const yearsUntilRetirement = function (birthYear,firstname)
-{
-const age = calcAge(birthYear);
-const retirement = 65 - age;
-if(retirement > 0){
-  return `${firstname} retires in ${retirement} years`;
-}
+// const yearsUntilRetirement = function (birthYear,firstname)
+// {
+// const age = calcAge(birthYear);
+// const retirement = 65 - age;
+// if(retirement > 0){
+//   return `${firstname} retires in ${retirement} years`;
+// }
 
-else {
-  return `Years left to retires ${Math.abs(retirement)} years`
-}
+// else {
+//   return `Years left to retires ${Math.abs(retirement)} years`
+// }
   
 
 
-}
+// }
 
-console.log(yearsUntilRetirement(1923,`keith`));
+// console.log(yearsUntilRetirement(1923,`keith`));
+
+//All about Arrays
+
+const friends = ['Keith', 'keith2', 'keith3'];
+
+console.log(friends.length);
