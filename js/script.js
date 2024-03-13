@@ -265,3 +265,49 @@ console.log(keith.calcSumm());
 //challenege
 //Jonas is a 46 year-old teacher, and he has a driver's license
 
+const mark= {
+  firstName:'Mark',
+  lastName:'Miller',
+  mass:78,
+  height:1.69,
+
+  calcBMI: function(){
+    return this.bmi = this.mass/this.height **2;
+  },
+  getSummary:function(){
+    return `${this.firstName}'s ${this.calcBMI().toFixed(1)} BMI is higher than ${john.firstName}'s ${john.calcBMI().toFixed(1)}`
+  }
+
+}
+
+const john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  mass:92,
+  height:1.95,
+
+  calcBMI: function(){
+   return this.bmi = this.mass/this.height ** 2;
+  },
+
+  getSummary:function(){
+    return `${this.firstName}'s ${this.calcBMI().toFixed(1)} BMI is higher than ${mark.firstName}'s ${mark.calcBMI().toFixed(1)}`
+  }
+
+}
+
+// console.log(john.getSummary());
+// console.log(mark.getSummary());
+
+
+if (john.calcBMI() > mark.calcBMI()){
+  console.log(john.getSummary());
+
+}
+else if (john.calcBMI() < mark.calcBMI()){
+  console.log(mark.getSummary());
+}
+else {
+  console.log(`No one wins`);
+}
+
