@@ -320,7 +320,9 @@
 const keithArray = [
   'Keith', 'Japitana',
   2024-1996,
-  'Gambler',['one','two','three']
+  'Gambler',
+  ['one','two','three'],
+  true
 ]
 
 // const type = [];
@@ -341,15 +343,23 @@ const keithArray = [
 // }
 // console.log(ages);
 
-for(let i = 0 ; i<keithArray.length; i++){
-  if(typeof keithArray[i] !== 'string')   
-   {
-    break;
-    // continue;
-  }
+// for(let i = 0 ; i<keithArray.length; i++){
+//   if(typeof keithArray[i] !== 'string')   
+//    {
+//     break;
+//     // continue;
+//   }
 
-  console.log(`${keithArray[i]} ${typeof      
-     keithArray[i]} `);
+//   console.log(`${keithArray[i]} ${typeof      
+//      keithArray[i]} `);
+//   // type[i] = typeof keithArray[i]
+//   // type.push(typeof keithArray[i])
+// }
+
+for(let i = keithArray.length -1 ; i>=0; i--){
+console.log(keithArray[i]);
+  // console.log(`${keithArray[i]} ${typeof      
+  //    keithArray[i]} `);
   // type[i] = typeof keithArray[i]
   // type.push(typeof keithArray[i])
 }
