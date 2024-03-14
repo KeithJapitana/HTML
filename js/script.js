@@ -434,4 +434,12 @@
 
 // //A identify the Bug
 // console.log(measureKelvin());
-console.log(document.querySelector('.message'));
+console.log(document.querySelector('.message').textContent);
+document.querySelector('.message').textContent = 'Correct Number';
+console.log(document.querySelector('.message').textContent);
+
+document.querySelector('.number').textContent = 12;
+document.querySelector('.score').textContent = 13;
+
+console.log(document.querySelector('.guess').value );
+document.querySelector('.guess').value = 12;
