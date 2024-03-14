@@ -407,3 +407,19 @@ console.log(caclTempAmplitude(temperatures));
 
 //problem 2;
 //function should now receive 2 arrays of temps
+
+
+//Problem log a value that promp a user to input a celcius that will be converted in to kelvin 
+
+const measureKelvin = function (){
+  const measurement ={
+    type:'temp',
+    unit: 'celcius',
+    value: prompt('Degrees Celcius'),
+  };
+  
+  const kelvin = measureKelvin.value + 273;
+  return kelvin;
+}
+
+console.log(measureKelvin);
