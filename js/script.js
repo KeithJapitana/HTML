@@ -386,24 +386,30 @@ const sensortwo = [13,-2,-26,-1,'error', 9,13,7,5,4,19,15];
 
 const temperatures = (sensorOne,sensortwo);
 
-const caclTempAmplitude = function (t1,t2){
+const caclTempAmplitudeBug = function (t1,t2){
+
   temps = t1.concat(t2);
-  let maxTemp = temps[0];
-  let minTemp = temps[0];
+  let maxTemp = 0;
+  let minTemp = 0;
+
   for (let i = 0; i < temps.length; i++){
     const curTemp = temps[i];
     if(typeof curTemp !== 'number') continue;
 
     if (curTemp > maxTemp)maxTemp = curTemp;
     if (curTemp < minTemp)minTemp = curTemp;
-  
   }
+  debugger;
+  console.log(maxTemp,minTemp);
   const amplitude = maxTemp - minTemp ;
   return `The max temp is: ${maxTemp} while the min temp is: ${minTemp} and the amplitude of the temp is: ${amplitude}`;
 };
 
 
-console.log(caclTempAmplitude(temperatures));
+//A identify a  Bug: Causing the min temp to 0
+const amplitudeBug = caclTempAmplitudeBug([3,5,1],[9,4,5])
+
+// console.log(caclTempAmplitudeBug(temperatures));
 
 //problem 2;
 //function should now receive 2 arrays of temps
@@ -412,14 +418,19 @@ console.log(caclTempAmplitude(temperatures));
 //Problem log a value that promp a user to input a celcius that will be converted in to kelvin 
 
 const measureKelvin = function (){
-  const measurement ={
+  const measurement = {
     type:'temp',
     unit: 'celcius',
-    value: prompt('Degrees Celcius'),
+    //C fix the Bug
+    value: Number(10),
   };
-  
-  const kelvin = measureKelvin.value + 273;
-  return kelvin;
+  //find the bug
+  // console.log(measurement);
+  // console.log(measurement.value);
+  // console.table(measurement);
+  const kelvin = measurement.value + 273;
+  return kelvin;              
 }
 
-console.log(measureKelvin);
+//A identify the Bug
+console.log(measureKelvin());
