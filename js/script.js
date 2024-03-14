@@ -317,13 +317,13 @@
 //   console.log(`lifting weights repetetion ${rep}`);
 // }
 
-const keithArray = [
-  'Keith', 'Japitana',
-  2024-1996,
-  'Gambler',
-  ['one','two','three'],
-  true
-]
+// const keithArray = [
+//   'Keith', 'Japitana',
+//   2024-1996,
+//   'Gambler',
+//   ['one','two','three'],
+//   true
+// ]
 
 // const type = [];
 
@@ -356,15 +356,54 @@ const keithArray = [
 //   // type.push(typeof keithArray[i])
 // }
 
-for(let i = keithArray.length -1 ; i>=0; i--){
-console.log(keithArray[i]);
+// for(let i = keithArray.length -1 ; i>=0; i--){
+// console.log(keithArray[i]);
   // console.log(`${keithArray[i]} ${typeof      
   //    keithArray[i]} `);
   // type[i] = typeof keithArray[i]
   // type.push(typeof keithArray[i])
-}
+// }
 
 
+//Problem
+//we work for a company building a start home thermometer. Our most recent task is this: Given an array of temepreature of one day, calculate the temperature amplitue. Keep in mind that sometimes there might be a seernsor error.
 
 
+//1. understand the problem 
+//what is temp aplitude difference between highest and lowest temp: 
+//how to compute max and min temp 
+//how to drop the error value 
+//what's a sensor error look like and what to do ?
 
+//2. Breaking into sub problems
+//how to ignore error?
+
+//calculate the amplitude/ subtract min from max 
+
+
+const sensorOne = [13,-2,-6,-1,'error', 9,13,17,15,14,9,5];
+const sensortwo = [13,-2,-26,-1,'error', 9,13,7,5,4,19,15];
+
+const temperatures = (sensorOne,sensortwo);
+
+const caclTempAmplitude = function (t1,t2){
+  temps = t1.concat(t2);
+  let maxTemp = temps[0];
+  let minTemp = temps[0];
+  for (let i = 0; i < temps.length; i++){
+    const curTemp = temps[i];
+    if(typeof curTemp !== 'number') continue;
+
+    if (curTemp > maxTemp)maxTemp = curTemp;
+    if (curTemp < minTemp)minTemp = curTemp;
+  
+  }
+  const amplitude = maxTemp - minTemp ;
+  return `The max temp is: ${maxTemp} while the min temp is: ${minTemp} and the amplitude of the temp is: ${amplitude}`;
+};
+
+
+console.log(caclTempAmplitude(temperatures));
+
+//problem 2;
+//function should now receive 2 arrays of temps
