@@ -449,10 +449,13 @@
 //Handling click events
 
 let winChecker = false;
-let scoreCounter = 19;
+let scoreCounter = 20;
+let highScore = 0;
 
-const secreteNumber = Math.trunc(Math.random()*20 + 1);
+let secreteNumber = Math.trunc(Math.random()*20 + 1);
 console.log(secreteNumber);
+
+
 
  
 
@@ -464,8 +467,12 @@ const realTimeChecker = function (){
 }
   
 const resetButton = function (){
-  
-  return scoreCounter = 20;
+  return 
+}
+
+const wrongdigit = function (){
+
+  return;
 }
 
 
@@ -473,7 +480,8 @@ document.querySelector('.check').addEventListener('click', function() {
   
   const guess = Number (document.querySelector('.guess').value);
   
-  document.querySelector('.message').textContent = 'Start guessing...';
+
+  // document.querySelector('.message').textContent = 'Start guessing...';
   
   console.log(guess, typeof guess);
 
@@ -491,6 +499,12 @@ document.querySelector('.check').addEventListener('click', function() {
     document.querySelector('.number').textContent = secreteNumber;
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '20rem';
+    if (scoreCounter > highScore){
+      highScore = scoreCounter;
+      document.querySelector('.highscore').textContent = highScore;
+    }
+    document.querySelector('.check').disabled = true;
+
   }
 
   //when player entered a higher number
@@ -526,6 +540,7 @@ document.querySelector('.check').addEventListener('click', function() {
     document.querySelector('body').style.backgroundColor = '#222';
     document.querySelector('.number').style.width = '15rem';
   }
+  // debugger;
 
   // else {
   //   document.querySelector('.message').textContent = 'Wrong number'
@@ -534,6 +549,8 @@ document.querySelector('.check').addEventListener('click', function() {
   // ;scoreCounter = scoreCounter
   
   //A function that check if the player score is  = 0
+  
+
   realTimeChecker();
   console.log(scoreCounter);
 }); 
@@ -542,12 +559,19 @@ document.querySelector('.check').addEventListener('click', function() {
 document.querySelector('.score').textContent = `${scoreCounter}`;
 
 document.querySelector('.again').addEventListener('click', function(){
+  
+  // debugger;
   document.querySelector('.guess').value = ``;
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.number').textContent = '?';
-  document.querySelector('body').style.backgroundColor = '#222'; 
-  document.querySelector('.score').textContent = scoreCounter;
-  console.log(`again was click`);
-  scoreCounter();
-
+  document.querySelector('body').style.backgroundColor = '#222';
+  // resetButton();
+  // console.log(document.querySelector('.message').textContent);
+  document.querySelector('.score').textContent = scoreCounter = 20;
+  secreteNumber = Math.trunc(Math.random()*20 + 1);
+  console.log(secreteNumber);
+  document.querySelector('.check').disabled = false;
+  // 
+ 
 });
+realTimeChecker();
