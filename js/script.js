@@ -478,7 +478,7 @@ const resetButton = function (){
 }
 
 const wrongdigit = function (){
-  scoreCounter = scoreCounter - 1;
+  scoreCounter = scoreCounter --;
   document.querySelector('.score').textContent = scoreCounter;
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
@@ -486,17 +486,13 @@ const wrongdigit = function (){
 }
 
 
-document.querySelector('.check').addEventListener('click', function() {
+document.querySelector('.check').addEventListener('click', function(){
   
   const guess = Number (document.querySelector('.guess').value);
-  
 
-
-  
   if(!guess){
     document.querySelector('.message').textContent = 'Please input a number';
   }
-    
   
   else if (guess == secreteNumber){
 
