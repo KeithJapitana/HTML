@@ -458,11 +458,13 @@ console.log(secreteNumber);
 document.querySelector('.number').textContent = secreteNumber;
  
 
+const realTimeChecker = function (){
   if (scoreCounter == 0){
     document.querySelector('.message').textContent = 'You lose';
   }
-
-
+  return; 
+}
+  
 
 
 document.querySelector('.check').addEventListener('click', function() {
@@ -487,7 +489,7 @@ document.querySelector('.check').addEventListener('click', function() {
   }
   
   else if (guess > secreteNumber){
-    debugger;
+    // debugger;
     if (scoreCounter > 0){
       
       document.querySelector('.message').textContent = "Number is to High";
@@ -520,6 +522,7 @@ document.querySelector('.check').addEventListener('click', function() {
     scoreCounter = -1;
   }
   // ;scoreCounter = scoreCounter
+  realTimeChecker();
   console.log(scoreCounter);
 }); 
 
