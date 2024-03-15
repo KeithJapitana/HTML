@@ -447,14 +447,82 @@
 // document.querySelector('.guess').value = 12;
 
 //Handling click events
-document.querySelector('.check').addEventListener('click', function() {
 
+let winChecker = false;
+let scoreCounter = 1;
+
+const secreteNumber = Math.trunc(Math.random()*20 + 1);
+console.log(secreteNumber);
+
+
+document.querySelector('.number').textContent = secreteNumber;
+ 
+
+  if (scoreCounter == 0){
+    document.querySelector('.message').textContent = 'You lose';
+  }
+
+
+
+
+document.querySelector('.check').addEventListener('click', function() {
+  
   const guess = Number (document.querySelector('.guess').value);
-  document.querySelector('.message').textContent = 'Correct number';
+  
+  document.querySelector('.message').textContent = 'Start guessing...';
+  
   console.log(guess, typeof guess);
 
   if(!guess){
     document.querySelector('.message').textContent = 'Please input a number';
   }
+    
+    
+  if (guess == secreteNumber){
+    document.querySelector('.message').textContent = "You got the correct number";
+    scoreCounter = scoreCounter + 1;
+    document.querySelector('.score').textContent = scoreCounter;
+    winChecker = true;
+    
+  }
+  
+  else if (guess > secreteNumber){
+    debugger;
+    if (scoreCounter > 0){
+      
+      document.querySelector('.message').textContent = "Number is to High";
+      scoreCounter = scoreCounter - 1;
+      document.querySelector('.score').textContent = scoreCounter;
+    }
+    else if (scoreCounter < 1){
+      document.querySelector('.message').textContent = 'You lose!'
+    }
 
-});
+    
+
+  }
+  else if (guess < secreteNumber){
+
+    if (scoreCounter > 0){
+      
+      document.querySelector('.message').textContent = "Number is to Low";
+      scoreCounter = scoreCounter - 1;
+      document.querySelector('.score').textContent = scoreCounter;
+    }
+    else{
+      document.querySelector('.message').textContent = 'You lose!'
+    }
+
+  }
+
+  else {
+    document.querySelector('.message').textContent = 'Wrong number'
+    scoreCounter = -1;
+  }
+  // ;scoreCounter = scoreCounter
+  console.log(scoreCounter);
+}); 
+
+
+document.querySelector('.score').textContent = `${scoreCounter}`;
+
