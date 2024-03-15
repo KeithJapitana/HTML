@@ -475,19 +475,23 @@ document.querySelector('.check').addEventListener('click', function() {
   
   console.log(guess, typeof guess);
 
+  //When there's no number
   if(!guess){
     document.querySelector('.message').textContent = 'Please input a number';
   }
     
-    
-  if (guess == secreteNumber){
+  //when player entered a correct number
+  else if (guess == secreteNumber){
     document.querySelector('.message').textContent = "You got the correct number";
     scoreCounter = scoreCounter + 1;
     document.querySelector('.score').textContent = scoreCounter;
     winChecker = true;
     
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '20rem';
   }
-  
+
+  //when player entered a higher number
   else if (guess > secreteNumber){
     // debugger;
     if (scoreCounter > 0){
@@ -499,9 +503,11 @@ document.querySelector('.check').addEventListener('click', function() {
     else if (scoreCounter < 1){
       document.querySelector('.message').textContent = 'You lose!'
     }
+    document.querySelector('body').style.backgroundColor = '#222';
+    document.querySelector('.number').style.width = '15rem';
 
     
-
+  //when player entered a lower number  
   }
   else if (guess < secreteNumber){
 
@@ -514,14 +520,18 @@ document.querySelector('.check').addEventListener('click', function() {
     else{
       document.querySelector('.message').textContent = 'You lose!'
     }
-
+    
+    document.querySelector('body').style.backgroundColor = '#222';
+    document.querySelector('.number').style.width = '15rem';
   }
 
-  else {
-    document.querySelector('.message').textContent = 'Wrong number'
-    scoreCounter = -1;
-  }
+  // else {
+  //   document.querySelector('.message').textContent = 'Wrong number'
+  //   scoreCounter = -1;
+  // }
   // ;scoreCounter = scoreCounter
+  
+  //A function that check if the player score is  = 0
   realTimeChecker();
   console.log(scoreCounter);
 }); 
